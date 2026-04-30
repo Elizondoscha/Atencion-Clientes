@@ -4,7 +4,7 @@ const SUPABASE_URL = "https://gymivghaccozapngkomt.supabase.co";
 const SUPABASE_KEY = "sb_publishable_nxcFI3DuMYTq9WwYTD_hPg_4jQ2pFyy";
 
 const TIPOS = ["Cambio de alcance", "Queja", "Solicitud info", "Urgente", "Material", "Técnico"];
-const PROYECTOS = ["Torre Monterrey", "Residencial Pedregal", "Planta Industrial Norte", "Centro Comercial Sur", "Red Fibra Noreste", "Otro"];
+
 
 const estilos = `
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap');
@@ -187,12 +187,7 @@ export default function Formulario() {
                     <Campo label="Empresa" delay={.15}>
                       <input className="input-field" placeholder="Constructora XYZ" value={form.empresa} onChange={e => set("empresa", e.target.value)} />
                     </Campo>
-                    <Campo label="Proyecto" delay={.20}>
-                      <select className="input-field" value={form.proyecto} onChange={e => set("proyecto", e.target.value)}>
-                        <option value="">Seleccionar...</option>
-                        {PROYECTOS.map(p => <option key={p}>{p}</option>)}
-                      </select>
-                    </Campo>
+                   
                   </div>
 
                   <Campo label="Tipo de solicitud" required delay={.25}>
