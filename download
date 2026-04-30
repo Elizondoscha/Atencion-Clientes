@@ -1,10 +1,6 @@
-import { useState } from "react";
-import MesaAtencion from "./MesaAtencion";
-import Formulario from "./Formulario";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
 
-export default function App() {
-  // Simple routing by URL path
-  const path = window.location.pathname;
-  if (path === "/formulario" || path === "/form") return <Formulario />;
-  return <MesaAtencion />;
-}
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<React.StrictMode><App /></React.StrictMode>);
